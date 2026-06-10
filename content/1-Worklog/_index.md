@@ -5,15 +5,12 @@ weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
-**On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
-
-Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
 
 **Week 1:** [Getting familiar with AWS and basic AWS services](1.1-week1/)
 
-**Week 2:** [Doing task A...](1.2-week2/)
+**Week 2:** [Getting familiar with AWS Networking Architecture and Connectivity](1.2-week2/)
 
-**Week 3:** [Doing task B...](1.3-week3/)
+**Week 3:** [Getting familiar with Amazon EC2 and AWS Compute & Storage Solutions](1.3-week3/)
 
 **Week 4:** [Doing task C...](1.4-week4/)
 

@@ -5,27 +5,37 @@ weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# TỐI ƯU VẬN HÀNH KUBERNETES VỚI AMAZON EKS AUTO MODE
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+Kubernetes mang lại khả năng triển khai và mở rộng ứng dụng mạnh mẽ, nhưng việc quản lý node, nâng cấp cluster, giám sát hệ thống và đảm bảo bảo mật có thể tạo ra nhiều áp lực cho đội ngũ vận hành.
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Trong bài viết của AWS, Generali Malaysia chia sẻ cách sử dụng Amazon EKS Auto Mode kết hợp với các dịch vụ AWS nhằm giảm khối lượng công việc quản trị Kubernetes và tối ưu hiệu quả vận hành.
 
-Các điểm chính cần nắm:
+## Những điểm nổi bật
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+* Amazon EKS Auto Mode tự động quản lý node, storage, load balancer và khả năng mở rộng tài nguyên.
+* AWS tự động cập nhật hệ điều hành Bottlerocket và các EKS Add-ons.
+* Amazon GuardDuty hỗ trợ phát hiện các mối đe dọa bảo mật trong môi trường Kubernetes.
+* Amazon Inspector giúp phát hiện và ưu tiên xử lý lỗ hổng bảo mật của container đang chạy.
+* AWS Network Firewall kiểm soát lưu lượng mạng và giới hạn truy cập đến các dịch vụ được cho phép.
+* AWS Secrets Manager kết hợp với External Secrets giúp quản lý thông tin nhạy cảm tập trung.
+* CloudWatch và Amazon Managed Grafana hỗ trợ theo dõi hệ thống và xây dựng dashboard giám sát.
+* AWS Cost Explorer cùng Savings Plans giúp tối ưu chi phí vận hành.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+![Blog Photo](/images/3-Blog/blog1-img.jpg)
 
-...Hình ảnh...
+## Kết quả đạt được
 
-...Link...
+* Giảm đáng kể công việc quản trị Kubernetes.
+* Tăng cường khả năng bảo mật hệ thống.
+* Tối ưu chi phí hạ tầng.
+* Rút ngắn thời gian xử lý sự cố.
+* Đẩy nhanh tốc độ triển khai ứng dụng.
 
-...Hướng dẫn...
+## Điều bản thân rút ra
+
+Theo em, Amazon EKS Auto Mode là một giải pháp rất hữu ích cho các tổ chức đang vận hành nhiều ứng dụng container. Việc tự động hóa quản lý hạ tầng giúp đội ngũ DevOps tập trung nhiều hơn vào phát triển sản phẩm thay vì xử lý các tác vụ vận hành thường ngày.
+
+## Tài liệu tham khảo
+
+[Bài viết gốc - Xem tại đây](https://www.facebook.com/photo?fbid=1647830246522148)

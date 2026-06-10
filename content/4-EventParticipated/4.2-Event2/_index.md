@@ -6,121 +6,118 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Event Report: Saturday Meet up
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+## Purpose of the Event
 
-### Event Objectives
+* Share practical knowledge and experiences related to AWS, Cloud Computing, DevOps, and Artificial Intelligence.
+* Help students gain a better understanding of modern technologies used in industry.
+* Introduce real-world projects built on AWS.
+* Provide career orientation in Cloud Computing, System Administration, Cyber Security, and AI.
+* Create opportunities for networking, learning, and community engagement.
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+## Speakers
 
-### Speakers
+* **Nguyen Quoc Bao**
+* **Huynh Quoc Bao**
+* **Viet Phat**
+* **Le Hoang Gia Dai**
+* **Tran Trung Vinh**
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+## Key Topics
 
-### Key Highlights
+### Multiplayer in the Cloud – Connecting Godot Clients with AWS WebSockets
 
-#### Identifying the drawbacks of legacy application architecture
+Nguyen Quoc Bao presented a solution for building multiplayer games on AWS using WebSocket, AWS Lambda, and DynamoDB.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+Key highlights:
 
-#### Transitioning to modern application architecture – Microservices
+* Comparison of multiplayer architectures such as UDP, WebSocket, and HTTP Polling.
+* Building real-time matchmaking and communication systems with AWS WebSocket.
+* Integrating Godot with AWS for multiplayer game development.
+* Introduction to AWS GameLift for large-scale real-time games.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+### Docker – A Containerization Technology
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+Huynh Quoc Bao shared knowledge about containerization and Docker.
 
-#### Domain-Driven Design (DDD)
+Key highlights:
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+* Understanding virtualization and the limitations of traditional virtual machines.
+* Introduction to containers and Docker.
+* Comparison between virtual machines and containers.
+* Benefits of Docker in software deployment.
+* Common Docker use cases in CI/CD, Microservices, and Cloud Computing.
 
-#### Event-Driven Architecture
+### Build GraphRAG Applications using Amazon Bedrock and Amazon Neptune
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+Viet Phat introduced GraphRAG and the use of graph databases in AI applications.
 
-#### Compute Evolution
+Key highlights:
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+* Introduction to Retrieval-Augmented Generation (RAG).
+* Limitations of traditional RAG in multi-hop reasoning tasks.
+* How GraphRAG leverages Knowledge Graphs to improve information retrieval.
+* Building GraphRAG applications with Amazon Bedrock and Amazon Neptune.
+* Comparison between managed and open-source solutions.
 
-#### Amazon Q Developer
+### Machine Learning-based NIDS on AWS
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+Le Hoang Gia Dai presented a project combining AWS WAF and Machine Learning for cyber attack detection.
 
-### Key Takeaways
+Key highlights:
 
-#### Design Mindset
+* Overview of AWS WAF and the limitations of rule-based protection.
+* Introduction to Network Intrusion Detection Systems (NIDS).
+* Building a machine learning model using the CSE-CIC-IDS2018 dataset.
+* Deploying the solution on AWS with a real-time monitoring dashboard.
+* Combining Machine Learning and AWS WAF to enhance threat detection.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+### From IT Helpdesk to Senior Sysadmin
 
-#### Technical Architecture
+Tran Trung Vinh shared his career journey from IT Helpdesk to System Administrator and his transition toward Cloud and DevOps.
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+Key highlights:
 
-#### Modernization Strategy
+* Essential skills gained from working in IT Helpdesk.
+* Learning Linux and Networking to become a System Administrator.
+* Daily responsibilities and experiences of a Sysadmin.
+* A recommended learning roadmap for Cloud and DevOps.
+* Interview experiences and career development advice.
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+## What I Learned
 
-### Applying to Work
+### Technical Knowledge
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+* Learned how to build real-time systems on AWS using WebSocket, Lambda, and DynamoDB.
+* Gained a better understanding of containerization and Docker.
+* Learned how GraphRAG combines AI with Graph Databases for more effective information retrieval.
+* Understood how Machine Learning can be applied in Cyber Security.
+* Explored various AWS services such as Bedrock, Neptune, WAF, Lambda, and DynamoDB.
 
-### Event Experience
+### Skills and Mindset
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+* Recognized the importance of learning through real-world projects.
+* Gained a clearer understanding of career paths in Cloud, DevOps, and System Administration.
+* Realized the value of continuous self-learning and hands-on practice.
+* Developed a stronger problem-solving mindset and a more structured approach to skill development.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+## Applications to My Studies and Future Work
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+* Explore and practice with the AWS services introduced during the event.
+* Learn Docker to support the deployment of personal and academic projects.
+* Apply Cloud and DevOps concepts to future coursework and software projects.
+* Further study AI, GraphRAG, and Machine Learning applications on AWS.
+* Build a clearer learning roadmap toward becoming a Cloud Engineer or DevOps Engineer.
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+## Event Experience
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+The event provided valuable insights and practical experiences from speakers who are actively working in the technology industry. What impressed me the most was that the sessions focused not only on theoretical concepts but also on real-world projects and practical implementations on AWS.
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+In addition to learning about Cloud Computing, Docker, AI, and Cyber Security, I also gained useful career advice, self-learning strategies, and personal development insights. The speakers’ experiences inspired me to continue improving my technical skills and exploring new technologies.
 
-#### Some event photos
-*Add your event photos here*  
+#### Some Photos from the Event
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+![Event Photo](/images/4-Event/event-2-pic.jpg)
+
+> Overall, Community Day was a highly informative and inspiring event that broadened my knowledge of AWS, AI, DevOps, and Cyber Security while providing valuable career guidance and practical industry insights.

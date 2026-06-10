@@ -5,27 +5,38 @@ weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# OPTIMIZING KUBERNETES OPERATIONS WITH AMAZON EKS AUTO MODE
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+Kubernetes provides powerful capabilities for deploying and scaling applications. However, managing nodes, upgrading clusters, monitoring systems, and maintaining security can create significant operational challenges for DevOps teams.
 
-Key points to know:
+In an AWS article, Generali Malaysia shared how they use Amazon EKS Auto Mode together with several AWS services to reduce Kubernetes operational overhead and improve infrastructure management efficiency.
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+## Key Highlights
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+* Amazon EKS Auto Mode automatically manages nodes, storage, load balancers, and resource scaling.
+* AWS automatically updates the Bottlerocket operating system and EKS Add-ons.
+* Amazon GuardDuty helps detect security threats and suspicious activities within Kubernetes environments.
+* Amazon Inspector identifies and prioritizes vulnerabilities in running containers.
+* AWS Network Firewall controls network traffic and restricts access to approved services.
+* AWS Secrets Manager, combined with External Secrets, provides centralized management of sensitive information.
+* Amazon CloudWatch and Amazon Managed Grafana help monitor systems and create operational dashboards.
+* AWS Cost Explorer and Savings Plans support infrastructure cost optimization.
 
-...Image...
+![Blog Photo](/images/3-Blog/blog1-img.jpg)
 
-...Link...
+## Results Achieved
 
-...Guide...
+* Significantly reduced Kubernetes operational workload.
+* Improved overall security posture.
+* Optimized infrastructure costs.
+* Reduced incident response and troubleshooting time.
+* Accelerated application deployment processes.
+
+## Personal Takeaways
+
+In my opinion, Amazon EKS Auto Mode is a valuable solution for organizations running multiple containerized applications. By automating infrastructure management tasks, DevOps teams can spend more time developing and improving applications instead of handling routine operational work.
+
+## References
+
+[Original Article - View Here](https://www.facebook.com/photo?fbid=1647830246522148)
