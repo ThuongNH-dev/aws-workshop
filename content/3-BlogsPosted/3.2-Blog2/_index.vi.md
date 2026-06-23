@@ -5,27 +5,33 @@ weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# AWS WAF GIÚP SCALE TO WIN CHỐNG DDoS NHƯ THẾ NÀO?
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Trong mùa bầu cử Tổng thống Mỹ năm 2024, Scale to Win đã phải đối mặt với nhiều cuộc tấn công DDoS có lưu lượng rất lớn. Để bảo vệ hệ thống, họ đã sử dụng Amazon CloudFront kết hợp với AWS WAF nhằm lọc và chặn lưu lượng độc hại trước khi truy cập vào hạ tầng bên trong.
 
-Các điểm chính cần nắm:
+## Những điểm nổi bật
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+* Sử dụng Amazon CloudFront và AWS WAF để lọc traffic ngay tại edge location.
+* Cấu hình Application Load Balancer chỉ nhận request hợp lệ từ CloudFront.
+* Sử dụng secret header để ngăn attacker truy cập trực tiếp vào ALB.
+* Tách biệt traffic người dùng và traffic machine-to-machine để áp dụng chính sách bảo vệ phù hợp.
+* Kết hợp Rate Limiting và CAPTCHA nhằm hạn chế các cuộc tấn công tự động.
+* AWS WAF Bot Control hỗ trợ phát hiện hành vi tái sử dụng CAPTCHA token từ botnet.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+![Blog Photo](/images/3-Blog/blog2-img.jpg)
 
-...Hình ảnh...
+## Kết quả đạt được
 
-...Link...
+* Giảm đáng kể tác động của các cuộc tấn công DDoS.
+* Ngăn chặn việc bypass CloudFront để tấn công trực tiếp vào hệ thống.
+* Tăng cường khả năng bảo vệ ứng dụng trước lưu lượng độc hại.
+* Duy trì khả năng phục vụ người dùng hợp lệ trong thời gian diễn ra tấn công.
 
-...Hướng dẫn...
+## Điều bản thân rút ra
+
+Theo em, bài viết cho thấy việc chống DDoS không chỉ đơn thuần là tăng tài nguyên hệ thống mà còn cần xây dựng kiến trúc bảo mật nhiều lớp. Việc kết hợp CloudFront, AWS WAF và các cơ chế kiểm soát traffic phù hợp giúp hệ thống an toàn và ổn định hơn trước các cuộc tấn công quy mô lớn.
+
+## Tài liệu tham khảo
+
+[Bài viết - Xem tại đây](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2180420536056240/)
