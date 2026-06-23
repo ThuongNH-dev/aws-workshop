@@ -12,7 +12,7 @@ pre: " <b> 1. </b> "
 
 **Tuần 3:** [Làm quen với Amazon EC2 và các giải pháp tính toán, lưu trữ trên AWS](1.3-week3/)
 
-**Tuần 4:** [Làm công việc C...](1.4-week4/)
+**Tuần 4:** [Làm quen với Amazon S3 và các giải pháp lưu trữ, sao lưu trên AWS](1.4-week4/)
 
 **Tuần 5:** [Làm công việc D...](1.5-week5/)
 

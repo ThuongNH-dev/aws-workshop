@@ -12,7 +12,7 @@ pre: " <b> 1. </b> "
 
 **Week 3:** [Getting familiar with Amazon EC2 and AWS Compute & Storage Solutions](1.3-week3/)
 
-**Week 4:** [Doing task C...](1.4-week4/)
+**Week 4:** [Getting familiar with Amazon S3 and AWS Storage & Backup Solutions](1.4-week4/)
 
 **Week 5:** [Doing task D...](1.5-week5/)
 
