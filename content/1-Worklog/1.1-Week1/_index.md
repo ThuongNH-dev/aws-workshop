@@ -12,7 +12,7 @@ pre: " <b> 1.1. </b> "
 * Connect and interact with members in the First Cloud AI Journey community.
 * Learn basic AWS services and become familiar with AWS Console & AWS CLI.
 
-### Tasks Completed This Week:
+### Tasks to be carried out this week:
 
 | Day | Tasks                                                                                                                                                                                                                                                     | Start Date | Completion Date | Reference                               |
 | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | --------------------------------------- |
@@ -22,7 +22,7 @@ pre: " <b> 1.1. </b> "
 | 5   | - Learn cost management on AWS using AWS Budgets <br> - Configure Budget and billing alerts <br> - Monitor AWS resource usage and estimated costs                                                                                                         | 21/05/2026 | 21/05/2026      | https://cloudjourney.awsstudygroup.com/ |
 | 6   | - Learn access management with AWS Identity and Access Management (IAM) <br> - Study IAM User, Group, Role, and Policy concepts <br> - Practice permission management and account security configurations                                                 | 22/05/2026 | 22/05/2026      | https://cloudjourney.awsstudygroup.com/ |
 
-### Achievements in Week 1:
+### Week 1 Achievements:
 
 * Understand the basic concepts of cloud computing and the role of AWS in deploying and managing cloud infrastructure.
 

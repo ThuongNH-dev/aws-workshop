@@ -14,7 +14,7 @@ pre: " <b> 1. </b> "
 
 **Week 4:** [Getting familiar with Amazon S3 and AWS Storage & Backup Solutions](1.4-week4/)
 
-**Week 5:** [Doing task D...](1.5-week5/)
+**Week 5:** [Getting familiar with Identity Management and Security Services on AWS](1.5-week5/)
 
 **Week 6:** [Doing task E...](1.6-week6/)
 

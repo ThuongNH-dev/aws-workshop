@@ -14,7 +14,7 @@ pre: " <b> 1. </b> "
 
 **Tuần 4:** [Làm quen với Amazon S3 và các giải pháp lưu trữ, sao lưu trên AWS](1.4-week4/)
 
-**Tuần 5:** [Làm công việc D...](1.5-week5/)
+**Tuần 5:** [Làm quen với quản lý danh tính và các dịch vụ bảo mật trên AWS](1.5-week5/)
 
 **Tuần 6:** [Làm công việc E...](1.6-week6/)
 

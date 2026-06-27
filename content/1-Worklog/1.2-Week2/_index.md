@@ -12,7 +12,7 @@ pre: " <b> 1.2. </b> "
 * Practice configuring core networking components such as Subnets, Route Tables, Internet Gateway, NAT Gateway, and Security Groups.
 * Explore connectivity solutions and load balancing services on AWS.
 
-### Tasks Completed This Week:
+### Tasks to be carried out this week:
 
 | Day | Tasks                                                                                                                                                                                                                                                                                                            | Start Date | Completion Date | Reference                                                          |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------------ |
@@ -22,7 +22,7 @@ pre: " <b> 1.2. </b> "
 | 5   | - Learn VPC Flow Logs and network monitoring <br> - Explore networking connectivity solutions: <br>  + VPC Peering <br>  + Transit Gateway <br>  + Site-to-Site VPN <br>  + Client VPN <br>  + Direct Connect                                                                                                    | 28/05/2026 | 28/05/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
 | 6   | - Learn Elastic Load Balancing (ELB) <br> - Compare different types of Load Balancers: <br>  + Application Load Balancer (ALB) <br>  + Network Load Balancer (NLB) <br>  + Classic Load Balancer (CLB) <br>  + Gateway Load Balancer (GWLB) <br> - **Hands-on Practice:** <br>  + Deploy and test Load Balancers | 29/05/2026 | 29/05/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
 
-### Achievements in Week 2:
+### Week 2 Achievements:
 
 * Understand the fundamental AWS networking architecture and the role of Amazon VPC in building isolated cloud environments.
 

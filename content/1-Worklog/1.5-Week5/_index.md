@@ -14,7 +14,7 @@ pre: " <b> 1.5. </b> "
 * Learn about authentication, authorization, and encryption key management services on AWS.
 * Explore centralized account management and security services in AWS.
 
-### Tasks Completed This Week:
+### Tasks to be carried out this week:
 
 | Day | Tasks                                                                                                                                                                                                                                                                                                                      | Start Date | Completion Date | Resources                                                          |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------------ |
@@ -24,7 +24,7 @@ pre: " <b> 1.5. </b> "
 | Thu | - Learn about Access Keys and AWS CLI Authentication <br> - Learn about IAM Roles for Amazon EC2 <br> - Learn about Amazon Cognito: <br>  + User Pools <br>  + Identity Pools <br> - **Hands-on Lab:** <br>  + Use Access Keys <br>  + Attach IAM Roles to EC2 Instances                                                   | 18/06/2026 | 18/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
 | Fri | - Learn about AWS Organizations <br> - Learn about Service Control Policies (SCP) <br> - Learn about AWS Identity Center (SSO) <br> - Learn about AWS KMS and Customer Managed Keys (CMK) <br> - Learn about AWS Security Hub and AWS security best practices                                                              | 19/06/2026 | 19/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
 
-### Achievements in Week 5:
+### Week 5 Achievements:
 
 * Understand the AWS Shared Responsibility Model and the division of security responsibilities between AWS and customers.
 
