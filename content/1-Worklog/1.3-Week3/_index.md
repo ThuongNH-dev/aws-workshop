@@ -13,7 +13,7 @@ pre: " <b> 1.3. </b> "
 * Explore storage solutions for EC2, including Elastic Block Store (EBS) and Instance Store.
 * Learn about backup mechanisms, authentication methods, and automatic scaling services on AWS.
 
-### Tasks Planned for This Week:
+### Tasks Completed This Week:
 
 | Day | Tasks                                                                                                                                                                                                                                                                                                                   | Start Date | Completion Date | Resources                                                          |
 | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------------ |

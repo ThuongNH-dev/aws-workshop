@@ -12,7 +12,7 @@ pre: " <b> 1.4. </b> "
 * Explore AWS storage, backup, and recovery solutions.
 * Understand storage cost optimization strategies and disaster recovery approaches on AWS.
 
-### Tasks to be Completed This Week:
+### Tasks Completed This Week:
 
 | Day | Tasks                                                                                                                                                                                                                                                                                                                                                                                                                    | Start Date | Completion Date | Resources                                                          |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ------------------------------------------------------------------ |
@@ -22,7 +22,7 @@ pre: " <b> 1.4. </b> "
 | 5   | - Learn about data transfer and migration solutions: <br>  + Snowball <br>  + Snowball Edge <br>  + Snowmobile <br> - Learn about AWS Storage Gateway: <br>  + File Gateway <br>  + Volume Gateway <br>  + Tape Gateway <br> - **Hands-on Practice:** <br>  + Create a Storage Gateway <br>  + Configure File Sharing                                                                                                    | 11/06/2026 | 11/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
 | 6   | - Learn about Disaster Recovery on AWS: <br>  + Recovery Time Objective (RTO) <br>  + Recovery Point Objective (RPO) <br>  + Backup & Restore <br>  + Pilot Light <br>  + Low Capacity Active <br>  + Full Capacity Active <br> - Learn about AWS Backup: <br>  + Backup Plan <br>  + Notification <br>  + Backup Monitoring <br> - **Hands-on Practice:** <br>  + Create a Backup Plan <br>  + Verify backup operations | 12/06/2026 | 12/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
 
-### Week 4 Achievements:
+### Achievements in Week 4:
 
 * Gained an understanding of Amazon S3 object storage architecture and how data is organized using Buckets and Objects.
 

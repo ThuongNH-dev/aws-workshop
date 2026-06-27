@@ -5,53 +5,80 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn about the AWS Shared Responsibility Model.
+* Learn about AWS Identity and Access Management (IAM).
+* Practice managing users, groups, and permissions in AWS.
+* Learn about authentication, authorization, and encryption key management services on AWS.
+* Explore centralized account management and security services in AWS.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks Completed This Week:
 
+| Day | Tasks                                                                                                                                                                                                                                                                                                                      | Start Date | Completion Date | Resources                                                          |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------------ |
+| Mon | - Learn about the AWS Shared Responsibility Model <br> - Learn about AWS IAM components: <br>  + Root Account <br>  + IAM User <br>  + IAM Group <br>  + IAM Policy <br>  + IAM Role <br> - **Hands-on Lab:** <br>  + Create IAM Groups and IAM Users <br>  + Create IAM Roles <br>  + Assume Roles                        | 15/06/2026 | 15/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| Tue | - Learn about IAM authorization mechanisms <br> - Learn about IAM Conditions: <br>  + IP Address Restrictions <br>  + Time-based Access Restrictions <br> - **Hands-on Lab:** <br>  + Create EC2 Administrator User <br>  + Create RDS Administrator User <br>  + Create Administrator Group <br>  + Configure Switch Role | 16/06/2026 | 16/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| Wed | - Learn about Permission Boundaries <br> - Learn about the Principle of Least Privilege <br> - **Hands-on Lab:** <br>  + Create Permission Boundary Policies <br>  + Create Restricted IAM Users <br>  + Verify Permission Restrictions                                                                                    | 17/06/2026 | 17/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| Thu | - Learn about Access Keys and AWS CLI Authentication <br> - Learn about IAM Roles for Amazon EC2 <br> - Learn about Amazon Cognito: <br>  + User Pools <br>  + Identity Pools <br> - **Hands-on Lab:** <br>  + Use Access Keys <br>  + Attach IAM Roles to EC2 Instances                                                   | 18/06/2026 | 18/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| Fri | - Learn about AWS Organizations <br> - Learn about Service Control Policies (SCP) <br> - Learn about AWS Identity Center (SSO) <br> - Learn about AWS KMS and Customer Managed Keys (CMK) <br> - Learn about AWS Security Hub and AWS security best practices                                                              | 19/06/2026 | 19/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
 
-### Week 5 Achievements:
+### Achievements in Week 5:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understand the AWS Shared Responsibility Model and the division of security responsibilities between AWS and customers.
 
-* Successfully created and configured an AWS Free Tier account.
+* Understand the architecture and access management mechanisms of AWS IAM.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Gain knowledge of the core IAM components:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+  * Root Account
+  * IAM User
+  * IAM Group
+  * IAM Policy
+  * IAM Role
 
-* Used AWS CLI to perform basic operations such as:
+* Understand the Principle of Least Privilege and its importance in access management.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Understand the IAM policy evaluation logic and the priority of Explicit Deny over Allow permissions.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Learn how to use IAM Conditions to control access based on:
+
+  * IP address restrictions
+  * Time-based access restrictions
+
+* Understand the concepts of Assume Role and Switch Role in AWS environments.
+
+* Understand the purpose and usage of Permission Boundaries to limit the maximum permissions granted to IAM Users.
+
+* Learn how Access Keys are used for programmatic access and understand the associated security considerations.
+
+* Understand the advantages of using IAM Roles for Amazon EC2 instead of embedding Access Keys.
+
+* Gain an understanding of Amazon Cognito components:
+
+  * User Pool
+  * Identity Pool
+
+* Understand how AWS Organizations can be used to centrally manage multiple AWS accounts.
+
+* Learn the role of Service Control Policies (SCPs) in governance and account-level permission management.
+
+* Understand how Single Sign-On (SSO) can be implemented using AWS Identity Center.
+
+* Learn how AWS KMS manages encryption keys and understand the use of Customer Managed Keys (CMKs).
+
+* Understand the purpose of AWS Security Hub and its role in monitoring security compliance and best practices.
+
+* Successfully complete hands-on labs including:
+
+  * Creating IAM Users and IAM Groups
+  * Creating and assuming IAM Roles
+  * Creating EC2 and RDS administrator users
+  * Configuring IAM Conditions
+  * Configuring Switch Role
+  * Creating Permission Boundaries
+  * Using Access Keys
+  * Assigning IAM Roles to EC2 instances
+
+* Be able to design and implement identity and access management strategies following AWS security best practices.

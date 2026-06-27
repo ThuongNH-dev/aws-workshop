@@ -5,55 +5,82 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu mô hình trách nhiệm chia sẻ trong AWS Security.
+* Tìm hiểu dịch vụ AWS Identity and Access Management (IAM).
+* Thực hành quản lý người dùng, nhóm và phân quyền trong AWS.
+* Tìm hiểu các cơ chế xác thực, phân quyền và quản lý khóa mã hóa trên AWS.
+* Tìm hiểu các dịch vụ hỗ trợ quản trị tập trung và bảo mật trên AWS.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc                                                                                                                                                                                                                                                                                 | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                     |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------------------------------------------------------ |
+| 2   | - Tìm hiểu Shared Responsibility Model trên AWS <br> - Tìm hiểu AWS IAM: <br>  + Root Account <br>  + IAM User <br>  + IAM Group <br>  + IAM Policy <br>  + IAM Role <br> - **Thực hành:** <br>  + Tạo IAM Group và IAM User <br>  + Tạo IAM Role <br>  + Assume Role                     | 15/06/2026   | 15/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| 3   | - Tìm hiểu cơ chế phân quyền trong IAM <br> - Tìm hiểu IAM Condition: <br>  + Giới hạn theo IP Address <br>  + Giới hạn theo thời gian truy cập <br> - **Thực hành:** <br>  + Tạo User quản trị EC2 <br>  + Tạo User quản trị RDS <br>  + Tạo Group quản trị <br>  + Cấu hình Switch Role | 16/06/2026   | 16/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| 4   | - Tìm hiểu Permission Boundary <br> - Tìm hiểu nguyên tắc Least Privilege <br> - **Thực hành:** <br>  + Tạo Policy giới hạn quyền <br>  + Tạo IAM User bị giới hạn quyền <br>  + Kiểm tra User bị giới hạn quyền                                                                          | 17/06/2026   | 17/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| 5   | - Tìm hiểu Access Key và AWS CLI Authentication <br> - Tìm hiểu IAM Role trên Amazon EC2 <br> - Tìm hiểu Amazon Cognito: <br>  + User Pool <br>  + Identity Pool <br> - **Thực hành:** <br>  + Sử dụng Access Key <br>  + Gán IAM Role cho EC2                                            | 18/06/2026   | 18/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| 6   | - Tìm hiểu AWS Organizations <br> - Tìm hiểu Service Control Policy (SCP) <br> - Tìm hiểu AWS Identity Center (SSO) <br> - Tìm hiểu AWS KMS và Customer Managed Key (CMK) <br> - Tìm hiểu AWS Security Hub và các tiêu chuẩn bảo mật AWS                                                  | 19/06/2026   | 19/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu được mô hình Shared Responsibility Model của AWS và phạm vi trách nhiệm giữa AWS với khách hàng.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu được kiến trúc và cơ chế quản lý truy cập của AWS IAM.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Nắm được các thành phần quan trọng của IAM:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+  * Root Account
+  * IAM User
+  * IAM Group
+  * IAM Policy
+  * IAM Role
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Hiểu được nguyên tắc phân quyền tối thiểu (Least Privilege Principle).
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Hiểu được cơ chế Explicit Deny và thứ tự ưu tiên của IAM Policy.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Nắm được cách sử dụng IAM Condition để kiểm soát quyền truy cập:
+
+  * Giới hạn theo địa chỉ IP
+  * Giới hạn theo thời gian truy cập
+
+* Hiểu được cơ chế Assume Role và Switch Role trong AWS.
+
+* Hiểu được mục đích và cách sử dụng Permission Boundary để giới hạn quyền tối đa của IAM User.
+
+* Hiểu được cơ chế xác thực bằng Access Key và các rủi ro bảo mật liên quan.
+
+* Hiểu được lợi ích của việc sử dụng IAM Role trên EC2 thay cho Access Key.
+
+* Hiểu được chức năng của Amazon Cognito:
+
+  * User Pool
+  * Identity Pool
+
+* Hiểu được cách quản lý nhiều AWS Account bằng AWS Organizations.
+
+* Hiểu được vai trò của Service Control Policy (SCP) trong quản trị tập trung.
+
+* Hiểu được cơ chế Single Sign-On thông qua AWS Identity Center.
+
+* Hiểu được cách quản lý khóa mã hóa bằng AWS KMS và Customer Managed Key (CMK).
+
+* Hiểu được chức năng giám sát và đánh giá bảo mật của AWS Security Hub.
+
+* Hoàn thành các bài thực hành về:
+
+  * Tạo IAM User và IAM Group
+  * Tạo IAM Role và Assume Role
+  * Tạo User quản trị EC2 và RDS
+  * Cấu hình IAM Condition
+  * Cấu hình Switch Role
+  * Tạo Permission Boundary
+  * Sử dụng Access Key
+  * Gán IAM Role cho EC2
+
+* Có khả năng thiết kế và triển khai mô hình quản lý danh tính và phân quyền phù hợp trên AWS.
+
 
 
