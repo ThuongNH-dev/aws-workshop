@@ -16,7 +16,7 @@ pre: " <b> 1. </b> "
 
 **Week 5:** [Getting familiar with Identity Management and Security Services on AWS](1.5-week5/)
 
-**Week 6:** [Doing task E...](1.6-week6/)
+**Week 6:** [Getting familiar with AWS Database Services and Data Migration](1.6-week6/)
 
 **Week 7:** [Doing task G...](1.7-week7/)
 
