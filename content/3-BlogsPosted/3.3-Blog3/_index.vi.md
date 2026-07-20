@@ -5,27 +5,32 @@ weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# KIẾN TRÚC HỆ THỐNG GIÚP AGENTIC AI PHÁT TRIỂN PHẦN MỀM HIỆU QUẢ HƠN
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Ngày càng nhiều doanh nghiệp ứng dụng AI Coding Assistant để tăng tốc quá trình phát triển phần mềm. Tuy nhiên, mặc dù AI có thể tạo mã nguồn rất nhanh, việc kiểm thử, xác thực và triển khai vẫn tiêu tốn nhiều thời gian. Theo AWS, nguyên nhân cốt lõi không nằm ở AI mà đến từ kiến trúc hệ thống chưa được tối ưu.
 
-Các điểm chính cần nắm:
+## Những điểm nổi bật
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+* Xây dựng Fast Feedback Loops giúp AI nhận phản hồi gần như ngay lập tức sau mỗi lần thay đổi mã nguồn.
+* Sử dụng Local Emulation và Lightweight Testing để giảm thời gian triển khai và tiết kiệm chi phí.
+* Tạo Preview Environments nhằm kiểm thử tính năng mới trước khi đưa vào môi trường production.
+* Tổ chức code theo Domain-Driven Design, tách biệt business logic và hạ tầng để AI dễ hiểu ngữ cảnh hơn.
+* Kết hợp nhiều lớp kiểm thử như Unit Test, Contract Test và Smoke Test nhằm nâng cao chất lượng và độ tin cậy của phần mềm.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+![Blog Photo](/images/3-Blog/blog3-img.jpg)
 
-...Hình ảnh...
+## Kết quả đạt được
 
-...Link...
+* Rút ngắn thời gian xác thực mã nguồn do AI tạo ra.
+* Nâng cao chất lượng phần mềm nhờ cơ chế phản hồi nhanh và kiểm thử tự động.
+* Giảm rủi ro khi triển khai thông qua các môi trường kiểm thử độc lập.
+* Tăng khả năng để AI Agent tự động hóa nhiều giai đoạn trong quy trình phát triển phần mềm.
 
-...Hướng dẫn...
+## Điều bản thân rút ra
+
+Theo em, bài viết cho thấy để khai thác hiệu quả Agentic AI, doanh nghiệp không chỉ cần một mô hình AI mạnh mà còn cần xây dựng kiến trúc hệ thống phù hợp. Việc kết hợp phản hồi nhanh, tổ chức mã nguồn rõ ràng và quy trình kiểm thử đầy đủ sẽ giúp AI hoạt động hiệu quả hơn, đồng thời nâng cao chất lượng và tốc độ phát triển phần mềm.
+
+## Tài liệu tham khảo
+
+[Bài viết - Xem tại đây](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2201707250594235/?rdid=Le865pC3R2JaAgDY#)

@@ -5,27 +5,32 @@ weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# HOW SYSTEM ARCHITECTURE EMPOWERS AGENTIC AI DEVELOPMENT ON AWS
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+As more organizations adopt AI coding assistants to accelerate software development, a common challenge has emerged: AI can generate code quickly, but validating, testing, and deploying that code often takes significantly longer. According to AWS, the key limitation is not the AI model itself, but the underlying system architecture.
 
-Key points to know:
+## Key Highlights
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+* Implemented fast feedback loops to help AI receive immediate validation after each code change.
+* Used local emulation and lightweight testing to reduce deployment time and cloud resource costs.
+* Created preview environments for AI to validate new features before production deployment.
+* Organized the codebase using domain-driven design to separate business logic from infrastructure.
+* Combined multiple testing layers, including Unit Tests, Contract Tests, and Smoke Tests, to improve code quality and reliability.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+![Blog Photo](/images/3-Blog/blog3-img.jpg)
 
-...Image...
+## Results
 
-...Link...
+* Reduced the time required for AI to validate generated code.
+* Improved software quality through faster feedback and automated testing.
+* Minimized deployment risks with isolated preview environments.
+* Enabled AI agents to perform more autonomous software development tasks.
 
-...Guide...
+## Personal Takeaway
+
+In my opinion, this article highlights that successful AI-assisted software development depends not only on advanced AI models but also on a well-designed system architecture. By adopting fast feedback mechanisms, modular code organization, and comprehensive testing strategies, organizations can unlock the full potential of Agentic AI while improving software quality and development efficiency.
+
+## References
+
+[Article - Read More](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2201707250594235/?rdid=Le865pC3R2JaAgDY#)
