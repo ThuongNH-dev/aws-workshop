@@ -5,55 +5,40 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Phân tích yêu cầu và xác định phạm vi của dự án.
+* Thiết kế kiến trúc tổng thể của hệ thống.
+* Thiết kế cơ sở dữ liệu và các API cần triển khai.
+* Thiết lập môi trường phát triển và quản lý mã nguồn.
+* Phân chia công việc cho các thành viên trong nhóm.
+* Chuẩn bị cho giai đoạn phát triển hệ thống.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------------------------------------------------ |
+| 2 | - Phân tích yêu cầu của dự án <br> - Xác định các chức năng chính của hệ thống <br> - Xây dựng Use Case tổng quát | 29/06/2026 | 29/06/2026 | Tài liệu yêu cầu dự án <br> GitHub Project |
+| 3 | - Thiết kế kiến trúc tổng thể của hệ thống <br> - Lựa chọn công nghệ sử dụng cho Frontend, Backend và Database <br> - Xây dựng sơ đồ kiến trúc | 30/06/2026 | 30/06/2026 | Draw.io <br> AWS Architecture Center |
+| 4 | - Thiết kế cơ sở dữ liệu <br> - Xây dựng ERD <br> - Thiết kế các bảng dữ liệu và mối quan hệ | 01/07/2026 | 01/07/2026 | Draw.io  |
+| 5 | - Thiết kế RESTful API <br> - Xây dựng tài liệu API <br> - Chuẩn bị cấu trúc Backend và Frontend | 02/07/2026 | 02/07/2026 | Swagger |
+| 6 | - Tạo GitHub Repository <br> - Thiết lập môi trường phát triển <br> - Phân chia nhiệm vụ cho từng thành viên <br> - Lập kế hoạch Sprint đầu tiên | 03/07/2026 | 03/07/2026 | GitHub |
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn thành phân tích yêu cầu và xác định phạm vi dự án.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Xây dựng được kiến trúc tổng thể của hệ thống.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Hoàn thành thiết kế cơ sở dữ liệu và sơ đồ ERD.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Thiết kế được các API phục vụ cho các chức năng chính.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Thiết lập môi trường phát triển cho toàn bộ nhóm.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Hoàn thành việc tạo GitHub Repository và quy trình làm việc với Git.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Phân chia nhiệm vụ cho từng thành viên và xây dựng kế hoạch phát triển theo Sprint.
 
-
+* Sẵn sàng bước sang giai đoạn phát triển các chức năng của hệ thống.
