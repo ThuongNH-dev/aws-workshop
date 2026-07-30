@@ -5,53 +5,40 @@ weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Complete the user authentication module.
+* Develop the group management features.
+* Implement the expense management module.
+* Develop the balance calculation and expense splitting features.
+* Integrate the backend APIs with the frontend.
+* Test and optimize the implemented functionalities.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be completed this week:
 
+| Day | Tasks | Start Date | Completion Date | Reference |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------ |
+| Mon | - Complete the Register and Login features <br> - Implement JWT Authentication <br> - Test user authentication | 13/07/2026 | 13/07/2026 | Express.js Documentation <br> JWT Documentation |
+| Tue | - Develop the Create Group feature <br> - Add and remove group members <br> - Update group information | 14/07/2026 | 14/07/2026 | MongoDB Documentation |
+| Wed | - Develop Create, Update, and Delete Expense features <br> - Support Equal, Custom, and Percentage expense splitting <br> - Test the Expense Management APIs | 15/07/2026 | 15/07/2026 | Express.js Documentation |
+| Thu | - Develop the Balance Calculation feature <br> - Calculate debts and credits among group members <br> - Implement settlement suggestions | 16/07/2026 | 16/07/2026 | MongoDB Documentation |
+| Fri | - Integrate Backend APIs with the Frontend <br> - Perform end-to-end testing <br> - Fix identified issues and synchronize the source code to GitHub | 17/07/2026 | 17/07/2026 | React Documentation <br> GitHub |
 
 ### Week 9 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Completed the Register, Login, and JWT Authentication features.
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully developed the group management module, including creating groups, adding members, and updating group information.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Completed the expense management module with Equal, Custom, and Percentage expense splitting methods.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Successfully implemented the balance calculation feature to determine debts and credits among group members.
 
-* Used AWS CLI to perform basic operations such as:
+* Successfully integrated the backend RESTful APIs with the frontend application.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Completed end-to-end testing and resolved issues identified during integration.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Synchronized the entire project source code with GitHub.
+
+* Completed the core business functionalities of the system, preparing the project for advanced features and AWS deployment in the following weeks.
