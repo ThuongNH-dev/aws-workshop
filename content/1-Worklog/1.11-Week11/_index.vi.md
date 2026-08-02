@@ -5,55 +5,37 @@ weight: 2
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện các chức năng còn lại của hệ thống.
+* Kiểm thử toàn bộ hệ thống (System Testing).
+* Tối ưu hiệu năng và trải nghiệm người dùng.
+* Hoàn thiện phân quyền và xử lý ngoại lệ.
+* Khắc phục các lỗi phát sinh trong quá trình kiểm thử.
+* Chuẩn bị hệ thống cho giai đoạn triển khai trên AWS.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------------------------------------------------ |
+| 2 | - Kiểm thử các chức năng Authentication, Group và Expense <br> - Kiểm tra luồng dữ liệu giữa Frontend và Backend <br> - Khắc phục các lỗi phát hiện được | 27/07/2026 | 27/07/2026 | React Documentation <br> Express.js Documentation |
+| 3 | - Hoàn thiện phân quyền người dùng <br> - Kiểm tra quyền truy cập của từng vai trò <br> - Xử lý các trường hợp ngoại lệ | 28/07/2026 | 28/07/2026 | JWT Documentation |
+| 4 | - Tối ưu hiệu năng truy vấn cơ sở dữ liệu <br> - Cải thiện giao diện và trải nghiệm người dùng <br> - Tối ưu các API | 29/07/2026 | 29/07/2026 | MongoDB Documentation |
+| 5 | - Kiểm thử toàn bộ quy trình nghiệp vụ <br> - Rà soát các chức năng còn thiếu <br> - Hoàn thiện tài liệu kiểm thử | 30/07/2026 | 30/07/2026 | Test Case Documentation |
+| 6 | - Khắc phục các lỗi còn tồn đọng <br> - Đồng bộ mã nguồn lên GitHub <br> - Chuẩn bị hệ thống cho giai đoạn triển khai AWS | 31/07/2026 | 31/07/2026 | GitHub |
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn thành kiểm thử toàn bộ các chức năng của hệ thống.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hoàn thiện phân quyền và xử lý các trường hợp ngoại lệ.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tối ưu hiệu năng của hệ thống và cải thiện trải nghiệm người dùng.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Khắc phục các lỗi phát hiện trong quá trình kiểm thử.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Hoàn thiện tài liệu kiểm thử và cập nhật mã nguồn lên GitHub.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Chuẩn bị đầy đủ hệ thống cho giai đoạn triển khai và cấu hình trên AWS.
 

@@ -5,55 +5,38 @@ weight: 2
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện chức năng thanh toán (Settlement).
+* Xây dựng hệ thống thông báo.
+* Xây dựng chức năng ghi nhận lịch sử hoạt động (Activity Log).
+* Hoàn thiện giao diện người dùng và tích hợp API.
+* Kiểm thử các chức năng nghiệp vụ của hệ thống.
+* Khắc phục các lỗi phát sinh trong quá trình phát triển.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------------------------------------------------ |
+| 2 | - Hoàn thiện chức năng Settlement <br> - Cập nhật trạng thái thanh toán <br> - Kiểm thử luồng thanh toán | 20/07/2026 | 20/07/2026 | Express.js Documentation |
+| 3 | - Xây dựng chức năng Notification <br> - Gửi thông báo khi có Expense hoặc Settlement mới <br> - Kiểm thử chức năng thông báo | 21/07/2026 | 21/07/2026 | Socket.IO / Express Documentation |
+| 4 | - Xây dựng Activity Log <br> - Lưu lịch sử các thao tác của người dùng <br> - Hiển thị lịch sử hoạt động | 22/07/2026 | 22/07/2026 | MongoDB Documentation |
+| 5 | - Hoàn thiện giao diện Expense, Balance và Settlement <br> - Tích hợp API với Frontend <br> - Kiểm thử các luồng nghiệp vụ | 23/07/2026 | 23/07/2026 | React Documentation |
+| 6 | - Kiểm thử toàn bộ hệ thống <br> - Khắc phục lỗi phát sinh <br> - Đồng bộ mã nguồn lên GitHub | 24/07/2026 | 24/07/2026 | GitHub |
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn thiện chức năng Settlement giữa các thành viên.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Xây dựng thành công hệ thống Notification.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Hoàn thiện chức năng Activity Log ghi nhận lịch sử hoạt động.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tích hợp thành công các API với giao diện người dùng.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Hoàn thành kiểm thử các chức năng nghiệp vụ chính và khắc phục các lỗi phát sinh.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Đồng bộ toàn bộ mã nguồn lên GitHub.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thiện hầu hết các chức năng của hệ thống, sẵn sàng cho giai đoạn kiểm thử tổng thể và triển khai lên AWS ở các tuần tiếp theo.
