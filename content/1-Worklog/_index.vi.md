@@ -18,14 +18,14 @@ pre: " <b> 1. </b> "
 
 **Tuần 6:** [Làm quen với dịch vụ Cơ sở dữ liệu và Di chuyển Dữ liệu trên AWS](1.6-week6/)
 
-**Tuần 7:** [Làm công việc G...](1.7-week7/)
+**Tuần 7:** [Phân tích yêu cầu và thiết kế hệ thống Shared Expense Splitter](1.7-week7/)
 
-**Tuần 8:** [Làm công việc H...](1.8-week8/)
+**Tuần 8:** [Xây dựng Backend và thiết kế cơ sở dữ liệu MongoDB](1.8-week8/)
 
-**Tuần 9:** [Làm công việc I...](1.9-week9/)
+**Tuần 9:** [Phát triển các chức năng xác thực, quản lý nhóm và quản lý chi phí](1.9-week9/)
 
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
+**Tuần 10:** [Hoàn thiện chức năng thanh toán, thông báo và nhật ký hoạt động](1.10-week10/)
 
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
+**Tuần 11:** [Kiểm thử, tối ưu hệ thống và chuẩn bị triển khai](1.11-week11/)
 
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+**Tuần 12:** [Triển khai hệ thống trên AWS và hoàn thiện tài liệu Workshop](1.12-week12/)
