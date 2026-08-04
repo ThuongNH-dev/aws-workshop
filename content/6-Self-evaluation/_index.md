@@ -6,34 +6,44 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+During my internship at **AWS Study Group** from **May 18, 2026** to **August 7, 2026**, I had the opportunity to learn, practice, and apply the knowledge I acquired at university to the development of a real-world project on the AWS cloud platform.
 
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.  
+Throughout the internship, I participated in developing the **Shared Expense Splitter** project, a system designed to manage and split expenses among group members. Through this project, I gained hands-on experience with the complete software development lifecycle, including requirements analysis, system design, application development, AWS deployment, system testing, and project completion.
 
-In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
+In addition, I had the opportunity to study and work with various technologies and AWS services such as **React + Vite**, **Node.js**, **Express.js**, **MongoDB Atlas**, **Amazon EC2**, **Amazon S3**, **AWS IAM**, **Amazon CloudWatch**, **JWT Authentication**, and the deployment process on the AWS cloud platform.
 
-To objectively reflect on my internship period, I would like to evaluate myself based on the following criteria:
+During the project, I significantly improved my technical skills in requirements analysis, database design, RESTful API development, frontend development, AWS deployment, system testing, Git/GitHub version control, and collaborative software development.
 
-| No. | Criteria                            | Description                                                                                      | Good | Fair | Average |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
-| 1   | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ✅    | ☐    | ☐       |
-| 2   | **Ability to learn**                | Ability to absorb new knowledge and learn quickly                                                | ☐    | ✅    | ☐       |
-| 3   | **Proactiveness**                   | Taking initiative, seeking out tasks without waiting for instructions                            | ✅    | ☐    | ☐       |
-| 4   | **Sense of responsibility**         | Completing tasks on time and ensuring quality                                                    | ✅    | ☐    | ☐       |
-| 5   | **Discipline**                      | Adhering to schedules, rules, and work processes                                                 | ☐    | ☐    | ✅       |
-| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ☐    | ✅    | ☐       |
-| 7   | **Communication**                   | Presenting ideas and reporting work clearly                                                      | ☐    | ✅    | ☐       |
-| 8   | **Teamwork**                        | Working effectively with colleagues and participating in teams                                   | ✅    | ☐    | ☐       |
-| 9   | **Professional conduct**            | Respecting colleagues, partners, and the work environment                                        | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Identifying problems, proposing solutions, and showing creativity                                | ☐    | ✅    | ☐       |
-| 11  | **Contribution to project/team**    | Work effectiveness, innovative ideas, recognition from the team                                  | ✅    | ☐    | ☐       |
-| 12  | **Overall**                         | General evaluation of the entire internship period                                               | ✅    | ☐    | ☐       |
+Regarding my work attitude, I always made an effort to complete assigned tasks on schedule, proactively researched documentation whenever I encountered difficulties, and actively accepted feedback from my supervisor and teammates to improve the quality of my work. I also maintained a cooperative attitude, supported my teammates whenever possible, and remained responsible throughout the internship.
 
-### Needs Improvement
+To provide an objective reflection of my internship experience, I would like to evaluate my performance based on the following criteria:
 
-* Strengthen discipline and strictly comply with the rules and regulations of the company or any organization  
-* Improve problem-solving thinking  
-* Enhance communication skills in both daily interactions and professional contexts, including handling situations effectively
+| No. | Criteria | Description | Good | Fair | Average |
+| --- | ------------------------------------ | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
+| 1 | **Professional Knowledge and Skills** | Understanding of the field, applying knowledge in practice, technical skills, and work quality | ✅ | ☐ | ☐ |
+| 2 | **Learning Ability** | Ability to quickly acquire and apply new knowledge | ☐ | ✅ | ☐ |
+| 3 | **Proactiveness** | Taking initiative and accepting tasks without waiting for instructions | ✅ | ☐ | ☐ |
+| 4 | **Responsibility** | Completing assigned tasks on time while ensuring quality | ✅ | ☐ | ☐ |
+| 5 | **Discipline** | Following working hours, company regulations, and development processes | ☐ | ✅ | ☐ |
+| 6 | **Willingness to Improve** | Accepting feedback and continuously improving personal skills | ✅ | ☐ | ☐ |
+| 7 | **Communication Skills** | Clearly presenting ideas and reporting work progress | ☐ | ✅ | ☐ |
+| 8 | **Teamwork** | Collaborating effectively with team members | ✅ | ☐ | ☐ |
+| 9 | **Professional Conduct** | Respecting colleagues, supervisors, and the working environment | ✅ | ☐ | ☐ |
+| 10 | **Problem-Solving Skills** | Identifying problems, analyzing situations, and proposing appropriate solutions | ☐ | ✅ | ☐ |
+| 11 | **Contribution to the Project** | Completing assigned tasks and contributing to the success of the project | ✅ | ☐ | ☐ |
+| 12 | **Overall Performance** | Overall evaluation of the internship period | ✅ | ☐ | ☐ |
+
+### Areas for Improvement
+
+* Continue improving my knowledge of system architecture and AWS services in order to design and deploy larger, more optimized cloud-based systems.
+
+* Strengthen my analytical and problem-solving skills to handle unexpected situations more effectively and efficiently.
+
+* Improve my communication and presentation skills, especially when collaborating with team members and presenting project progress.
+
+* Gain more experience in system performance optimization, application security, and AWS cost optimization.
+
+* Maintain a proactive learning mindset, continuously update my technical knowledge, and further develop my professional skills to better prepare for future career opportunities.
+
+
+
