@@ -5,6 +5,7 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
+
 ### Mục tiêu tuần 5:
 
 * Tìm hiểu mô hình trách nhiệm chia sẻ trong AWS Security.
@@ -12,16 +13,19 @@ pre: " <b> 1.5. </b> "
 * Thực hành quản lý người dùng, nhóm và phân quyền trong AWS.
 * Tìm hiểu các cơ chế xác thực, phân quyền và quản lý khóa mã hóa trên AWS.
 * Tìm hiểu các dịch vụ hỗ trợ quản trị tập trung và bảo mật trên AWS.
+* Phân tích yêu cầu nghiệp vụ của hệ thống quản lý chi tiêu nhóm.
+* Xác định các chức năng chính và phạm vi của hệ thống.
+* Phác thảo kiến trúc tổng thể triển khai trên AWS.
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                                                                                                                                 | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                     |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------------------------------------------------------ |
-| 2   | - Tìm hiểu Shared Responsibility Model trên AWS <br> - Tìm hiểu AWS IAM: <br>  + Root Account <br>  + IAM User <br>  + IAM Group <br>  + IAM Policy <br>  + IAM Role <br> - **Thực hành:** <br>  + Tạo IAM Group và IAM User <br>  + Tạo IAM Role <br>  + Assume Role                     | 15/06/2026   | 15/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
-| 3   | - Tìm hiểu cơ chế phân quyền trong IAM <br> - Tìm hiểu IAM Condition: <br>  + Giới hạn theo IP Address <br>  + Giới hạn theo thời gian truy cập <br> - **Thực hành:** <br>  + Tạo User quản trị EC2 <br>  + Tạo User quản trị RDS <br>  + Tạo Group quản trị <br>  + Cấu hình Switch Role | 16/06/2026   | 16/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
-| 4   | - Tìm hiểu Permission Boundary <br> - Tìm hiểu nguyên tắc Least Privilege <br> - **Thực hành:** <br>  + Tạo Policy giới hạn quyền <br>  + Tạo IAM User bị giới hạn quyền <br>  + Kiểm tra User bị giới hạn quyền                                                                          | 17/06/2026   | 17/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
-| 5   | - Tìm hiểu Access Key và AWS CLI Authentication <br> - Tìm hiểu IAM Role trên Amazon EC2 <br> - Tìm hiểu Amazon Cognito: <br>  + User Pool <br>  + Identity Pool <br> - **Thực hành:** <br>  + Sử dụng Access Key <br>  + Gán IAM Role cho EC2                                            | 18/06/2026   | 18/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
-| 6   | - Tìm hiểu AWS Organizations <br> - Tìm hiểu Service Control Policy (SCP) <br> - Tìm hiểu AWS Identity Center (SSO) <br> - Tìm hiểu AWS KMS và Customer Managed Key (CMK) <br> - Tìm hiểu AWS Security Hub và các tiêu chuẩn bảo mật AWS                                                  | 19/06/2026   | 19/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| Thứ | Công việc                                                                                                                                                                                                                                                                                                                                                                                                               | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                     |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ------------------------------------------------------------------ |
+| 2 | - Tìm hiểu Shared Responsibility Model trên AWS <br> - Tìm hiểu AWS IAM: <br>  + Root Account <br>  + IAM User <br>  + IAM Group <br>  + IAM Policy <br>  + IAM Role <br> - **Thực hành:** <br>  + Tạo IAM Group và IAM User <br>  + Tạo IAM Role <br>  + Assume Role <br> - Phân tích yêu cầu của hệ thống quản lý chi tiêu nhóm. <br> - Xác định các nhóm chức năng chính của hệ thống. | 15/06/2026 | 15/06/2026 | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| 3 | - Tìm hiểu cơ chế phân quyền trong IAM <br> - Tìm hiểu IAM Condition: <br>  + Giới hạn theo IP Address <br>  + Giới hạn theo thời gian truy cập <br> - **Thực hành:** <br>  + Tạo User quản trị EC2 <br>  + Tạo User quản trị RDS <br>  + Tạo Group quản trị <br>  + Cấu hình Switch Role <br> - Xây dựng Use Case Diagram. <br> - Xác định Actor và luồng nghiệp vụ chính. | 16/06/2026 | 16/06/2026 | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| 4 | - Tìm hiểu Permission Boundary <br> - Tìm hiểu nguyên tắc Least Privilege <br> - **Thực hành:** <br>  + Tạo Policy giới hạn quyền <br>  + Tạo IAM User bị giới hạn quyền <br>  + Kiểm tra User bị giới hạn quyền <br> - Phân tích kiến trúc triển khai trên AWS. <br> - Lựa chọn các dịch vụ AWS phù hợp cho hệ thống. | 17/06/2026 | 17/06/2026 | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| 5 | - Tìm hiểu Access Key và AWS CLI Authentication <br> - Tìm hiểu IAM Role trên Amazon EC2 <br> - Tìm hiểu Amazon Cognito: <br>  + User Pool <br>  + Identity Pool <br> - **Thực hành:** <br>  + Sử dụng Access Key <br>  + Gán IAM Role cho EC2 <br> - Thiết kế kiến trúc tổng thể (High-level Architecture). <br> - Xác định các thành phần Frontend, Backend và Cloud. | 18/06/2026 | 18/06/2026 | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| 6 | - Tìm hiểu AWS Organizations <br> - Tìm hiểu Service Control Policy (SCP) <br> - Tìm hiểu AWS Identity Center (SSO) <br> - Tìm hiểu AWS KMS và Customer Managed Key (CMK) <br> - Tìm hiểu AWS Security Hub và các tiêu chuẩn bảo mật AWS <br> - Chuẩn bị thiết kế cơ sở dữ liệu MongoDB Atlas và kiến trúc Backend cho tuần 6. | 19/06/2026 | 19/06/2026 | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
 
 ### Kết quả đạt được tuần 5:
 
@@ -82,5 +86,22 @@ pre: " <b> 1.5. </b> "
 
 * Có khả năng thiết kế và triển khai mô hình quản lý danh tính và phân quyền phù hợp trên AWS.
 
+* Phân tích được yêu cầu nghiệp vụ của hệ thống quản lý chi tiêu nhóm.
+
+* Xác định được các chức năng chính của hệ thống:
+
+  * Quản lý nhóm
+  * Quản lý thành viên
+  * Quản lý khoản chi
+  * Theo dõi số dư
+  * Thống kê và báo cáo
+
+* Hoàn thành phân tích Use Case và luồng nghiệp vụ chính.
+
+* Xây dựng bản thiết kế kiến trúc tổng thể của hệ thống trên AWS.
+
+* Xác định được mô hình triển khai gồm Frontend, Backend và các dịch vụ Cloud.
+
+* Chuẩn bị cho giai đoạn thiết kế cơ sở dữ liệu MongoDB Atlas và kiến trúc Backend.
 
 

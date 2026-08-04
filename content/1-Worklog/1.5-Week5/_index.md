@@ -6,31 +6,34 @@ chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
-### Week 5 Objectives:
+### Objectives of Week 5:
 
 * Learn about the AWS Shared Responsibility Model.
-* Learn about AWS Identity and Access Management (IAM).
-* Practice managing users, groups, and permissions in AWS.
-* Learn about authentication, authorization, and encryption key management services on AWS.
-* Explore centralized account management and security services in AWS.
+* Study AWS Identity and Access Management (IAM).
+* Practice user, group, and permission management in AWS.
+* Learn authentication, authorization, and encryption key management mechanisms in AWS.
+* Explore AWS services for centralized administration and security.
+* Analyze the business requirements of the Group Expense Management System.
+* Identify the main features and project scope.
+* Draft the overall system architecture to be deployed on AWS.
 
-### Tasks to be carried out this week:
+### Tasks for This Week:
 
-| Day | Tasks                                                                                                                                                                                                                                                                                                                      | Start Date | Completion Date | Resources                                                          |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------------ |
-| Mon | - Learn about the AWS Shared Responsibility Model <br> - Learn about AWS IAM components: <br>  + Root Account <br>  + IAM User <br>  + IAM Group <br>  + IAM Policy <br>  + IAM Role <br> - **Hands-on Lab:** <br>  + Create IAM Groups and IAM Users <br>  + Create IAM Roles <br>  + Assume Roles                        | 15/06/2026 | 15/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
-| Tue | - Learn about IAM authorization mechanisms <br> - Learn about IAM Conditions: <br>  + IP Address Restrictions <br>  + Time-based Access Restrictions <br> - **Hands-on Lab:** <br>  + Create EC2 Administrator User <br>  + Create RDS Administrator User <br>  + Create Administrator Group <br>  + Configure Switch Role | 16/06/2026 | 16/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
-| Wed | - Learn about Permission Boundaries <br> - Learn about the Principle of Least Privilege <br> - **Hands-on Lab:** <br>  + Create Permission Boundary Policies <br>  + Create Restricted IAM Users <br>  + Verify Permission Restrictions                                                                                    | 17/06/2026 | 17/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
-| Thu | - Learn about Access Keys and AWS CLI Authentication <br> - Learn about IAM Roles for Amazon EC2 <br> - Learn about Amazon Cognito: <br>  + User Pools <br>  + Identity Pools <br> - **Hands-on Lab:** <br>  + Use Access Keys <br>  + Attach IAM Roles to EC2 Instances                                                   | 18/06/2026 | 18/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
-| Fri | - Learn about AWS Organizations <br> - Learn about Service Control Policies (SCP) <br> - Learn about AWS Identity Center (SSO) <br> - Learn about AWS KMS and Customer Managed Keys (CMK) <br> - Learn about AWS Security Hub and AWS security best practices                                                              | 19/06/2026 | 19/06/2026      | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| Day | Tasks | Start Date | End Date | References |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ------------------------------------------------------------ |
+| Mon | - Study the AWS Shared Responsibility Model <br> - Learn AWS IAM: <br>  + Root Account <br>  + IAM User <br>  + IAM Group <br>  + IAM Policy <br>  + IAM Role <br> - **Practice:** <br>  + Create IAM Groups and IAM Users <br>  + Create IAM Roles <br>  + Assume Roles <br> - Analyze the business requirements of the Group Expense Management System. <br> - Identify the main functional modules of the system. | 15/06/2026 | 15/06/2026 | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| Tue | - Learn IAM authorization mechanisms <br> - Study IAM Conditions: <br>  + IP Address restriction <br>  + Time-based access restriction <br> - **Practice:** <br>  + Create EC2 Administrator User <br>  + Create RDS Administrator User <br>  + Create Administrator Group <br>  + Configure Switch Role <br> - Design the Use Case Diagram. <br> - Identify actors and major business workflows. | 16/06/2026 | 16/06/2026 | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| Wed | - Learn Permission Boundary <br> - Study the Least Privilege Principle <br> - **Practice:** <br>  + Create restricted IAM Policies <br>  + Create limited IAM Users <br>  + Verify restricted user permissions <br> - Analyze the AWS deployment architecture. <br> - Select appropriate AWS services for the system. | 17/06/2026 | 17/06/2026 | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| Thu | - Learn Access Keys and AWS CLI Authentication <br> - Learn IAM Roles for Amazon EC2 <br> - Study Amazon Cognito: <br>  + User Pool <br>  + Identity Pool <br> - **Practice:** <br>  + Authenticate using Access Keys <br>  + Attach IAM Roles to EC2 <br> - Design the high-level system architecture. <br> - Identify Frontend, Backend, and Cloud components. | 18/06/2026 | 18/06/2026 | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
+| Fri | - Learn AWS Organizations <br> - Learn Service Control Policies (SCP) <br> - Learn AWS Identity Center (SSO) <br> - Learn AWS KMS and Customer Managed Keys (CMK) <br> - Learn AWS Security Hub and AWS security best practices <br> - Prepare for MongoDB Atlas database design and Backend architecture implementation in Week 6. | 19/06/2026 | 19/06/2026 | https://cloudjourney.awsstudygroup.com/ <br> https://byvn.net/PcQc |
 
 ### Week 5 Achievements:
 
-* Understand the AWS Shared Responsibility Model and the division of security responsibilities between AWS and customers.
+* Understood the AWS Shared Responsibility Model and the responsibilities between AWS and customers.
 
-* Understand the architecture and access management mechanisms of AWS IAM.
+* Understood the architecture and access management mechanism of AWS IAM.
 
-* Gain knowledge of the core IAM components:
+* Learned the key IAM components:
 
   * Root Account
   * IAM User
@@ -38,47 +41,65 @@ pre: " <b> 1.5. </b> "
   * IAM Policy
   * IAM Role
 
-* Understand the Principle of Least Privilege and its importance in access management.
+* Understood the Least Privilege Principle.
 
-* Understand the IAM policy evaluation logic and the priority of Explicit Deny over Allow permissions.
+* Understood Explicit Deny and IAM Policy evaluation order.
 
-* Learn how to use IAM Conditions to control access based on:
+* Learned how to use IAM Conditions to control access:
 
-  * IP address restrictions
-  * Time-based access restrictions
+  * IP Address restriction
+  * Time-based access restriction
 
-* Understand the concepts of Assume Role and Switch Role in AWS environments.
+* Understood the Assume Role and Switch Role mechanisms in AWS.
 
-* Understand the purpose and usage of Permission Boundaries to limit the maximum permissions granted to IAM Users.
+* Learned the purpose and usage of Permission Boundaries for limiting IAM User permissions.
 
-* Learn how Access Keys are used for programmatic access and understand the associated security considerations.
+* Understood Access Key authentication and its associated security risks.
 
-* Understand the advantages of using IAM Roles for Amazon EC2 instead of embedding Access Keys.
+* Understood the advantages of using IAM Roles for EC2 instead of Access Keys.
 
-* Gain an understanding of Amazon Cognito components:
+* Learned the functionality of Amazon Cognito:
 
   * User Pool
   * Identity Pool
 
-* Understand how AWS Organizations can be used to centrally manage multiple AWS accounts.
+* Understood how to manage multiple AWS accounts using AWS Organizations.
 
-* Learn the role of Service Control Policies (SCPs) in governance and account-level permission management.
+* Learned the role of Service Control Policies (SCP) in centralized governance.
 
-* Understand how Single Sign-On (SSO) can be implemented using AWS Identity Center.
+* Understood Single Sign-On (SSO) using AWS Identity Center.
 
-* Learn how AWS KMS manages encryption keys and understand the use of Customer Managed Keys (CMKs).
+* Learned how to manage encryption keys using AWS KMS and Customer Managed Keys (CMK).
 
-* Understand the purpose of AWS Security Hub and its role in monitoring security compliance and best practices.
+* Understood the security monitoring and compliance capabilities of AWS Security Hub.
 
-* Successfully complete hands-on labs including:
+* Completed hands-on labs:
 
-  * Creating IAM Users and IAM Groups
-  * Creating and assuming IAM Roles
-  * Creating EC2 and RDS administrator users
-  * Configuring IAM Conditions
-  * Configuring Switch Role
-  * Creating Permission Boundaries
-  * Using Access Keys
-  * Assigning IAM Roles to EC2 instances
+  * Create IAM Users and IAM Groups
+  * Create IAM Roles and Assume Roles
+  * Create EC2 and RDS administrator users
+  * Configure IAM Conditions
+  * Configure Switch Roles
+  * Create Permission Boundaries
+  * Authenticate using Access Keys
+  * Attach IAM Roles to EC2
 
-* Be able to design and implement identity and access management strategies following AWS security best practices.
+* Gained the ability to design and implement identity and access management models on AWS.
+
+* Completed the business requirement analysis for the Group Expense Management System.
+
+* Identified the core features of the system:
+
+  * Group management
+  * Member management
+  * Expense management
+  * Balance tracking
+  * Statistics and reporting
+
+* Completed the Use Case analysis and major business workflows.
+
+* Designed the high-level AWS system architecture.
+
+* Identified the overall deployment model, including the Frontend, Backend, and Cloud infrastructure.
+
+* Prepared for MongoDB Atlas database design and Backend architecture development.
