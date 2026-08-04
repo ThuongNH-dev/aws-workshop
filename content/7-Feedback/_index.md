@@ -6,42 +6,61 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
-
 ### Overall Evaluation
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+**1. Working Environment**
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+I really enjoyed the working environment at the company. Everyone was friendly, approachable, and always willing to help. The workplace was professional without being stressful, which made it easy for me to adapt and learn. This was one of the things that impressed me the most during my internship.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**2. Support from Mentor / Team Admin**
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+My mentor always provided clear guidance whenever I encountered difficulties and encouraged me to explore and solve problems on my own before offering assistance. In addition, the admin team was very supportive and responsive in answering questions related to procedures, documents, and other issues throughout the internship. Their support made me feel comfortable and confident during my internship.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**3. Relevance of the Work to My Major**
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+The tasks assigned to me were closely related to my major in Information Technology. During the internship, I had the opportunity to apply the knowledge I learned at university while also gaining hands-on experience with new technologies, tools, and software development workflows.
+
+**4. Learning and Skill Development Opportunities**
+
+This internship allowed me to develop many valuable skills, including teamwork, task management, Git, AWS, and the software development process in a professional environment. These experiences have been very helpful for both my technical growth and future career.
+
+**5. Company Culture and Teamwork**
+
+I highly appreciate the company's culture. Everyone was willing to share knowledge, support one another, and create opportunities for interns to learn and grow. This made me feel like a valued member of the team throughout my internship.
+
+**6. Internship Policies and Benefits**
+
+The company provides interns with valuable learning opportunities through training programs and practical work experience. However, I hope the office registration process can be improved. Currently, office visit requests are usually approved at the end of the day, and it is difficult to know in advance which day the request will be approved. This makes it challenging to arrange my study schedule and personal plans. Receiving confirmations earlier would make the process much more convenient for interns.
 
 ---
 
 ### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+
+**What did you enjoy the most during your internship?**
+
+The thing I appreciated the most was the friendly working environment and the great support from both my mentor and the admin team. They were always willing to answer my questions, share their experience, and encourage me to learn and improve.
+
+**What do you think the company should improve for future interns?**
+
+I believe the office registration process could be improved. If registration requests could be confirmed earlier and more clearly, interns would be able to plan their schedules more effectively.
+
+**Would you recommend this internship to your friends? Why?**
+
+Yes, I would. The company provides a professional and welcoming working environment with many opportunities to learn. My mentor and colleagues were always supportive, allowing interns to improve both their technical knowledge and practical working skills.
 
 ---
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+### Suggestions and Expectations
+
+**Do you have any suggestions to improve the internship experience?**
+
+I hope the company can improve the office registration process by providing earlier confirmations so that interns can better manage their schedules. In addition, organizing more networking sessions or knowledge-sharing activities between teams would help interns learn more and connect with others.
+
+**Would you like to continue this program in the future?**
+
+Yes. If given the opportunity, I would be happy to continue working with the company to gain more experience, strengthen my professional skills, and contribute to future projects.
+
+**Additional Comments**
+
+I would like to sincerely thank my mentor, the admin team, and everyone at the company for giving me such a meaningful internship experience. I learned a great deal of knowledge, practical experience, and professional skills during my internship. I wish the company continued success and hope it will continue providing valuable learning opportunities for future interns.
+
