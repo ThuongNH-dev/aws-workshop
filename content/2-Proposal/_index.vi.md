@@ -5,104 +5,294 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
-
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+# Splitly – Group Expense Sharing Platform 
+## Giải pháp AWS tập trung cho quản lý, chia sẻ và quyết toán chi phí nhóm 
 
 ### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+Splitly là nền tảng quản lý và chia sẻ chi phí nhóm được phát triển nhằm hỗ trợ người dùng theo dõi các khoản chi tiêu chung, tính toán công nợ và quản lý quá trình thanh toán giữa các thành viên một cách minh bạch và thuận tiện.
+
+Hệ thống được xây dựng theo kiến trúc web hiện đại với React + Vite cho giao diện người dùng, Node.js/Express cho dịch vụ backend và MongoDB Atlas làm cơ sở dữ liệu. Hạ tầng được triển khai trên AWS, sử dụng Amazon EC2 để chạy ứng dụng backend và frontend, Amazon S3 để lưu trữ hóa đơn và hình ảnh chứng từ, Amazon CloudWatch để giám sát hệ thống, cùng Amazon VPC và Security Group nhằm đảm bảo kết nối mạng an toàn.
+
+Nền tảng cung cấp các chức năng chính như quản lý nhóm, ghi nhận và chia sẻ chi phí, tính toán công nợ, theo dõi trạng thái thanh toán giữa các thành viên và lưu trữ hóa đơn điện tử. Kiến trúc được thiết kế theo hướng dễ mở rộng và phù hợp với các nhóm người dùng nhỏ đến vừa.  
 
 ### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+*Vấn đề hiện tại* 
+
+Việc quản lý chi tiêu nhóm hiện nay vẫn chủ yếu được thực hiện thủ công thông qua bảng tính hoặc tin nhắn trong các ứng dụng trò chuyện. Khi số lượng thành viên và khoản chi tăng lên, việc theo dõi ai đã thanh toán, ai còn nợ và số tiền cần quyết toán trở nên phức tạp và dễ xảy ra sai sót.
+
+Một số khó khăn thường gặp bao gồm:
+- Khó quản lý nhiều khoản chi trong cùng một nhóm.
+- Việc tính toán công nợ giữa các thành viên mất nhiều thời gian và dễ nhầm lẫn.
+- Thiếu hệ thống lưu trữ hóa đơn tập trung để đối chiếu khi cần.
+- Không có cơ chế theo dõi trạng thái thanh toán rõ ràng giữa người nợ và người nhận tiền.
+- Khó theo dõi hoạt động của hệ thống và xử lý sự cố khi ứng dụng được triển khai.
 
 *Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+
+Giải pháp xây dựng Splitly trên nền tảng AWS nhằm số hóa việc quản lý chi tiêu nhóm. Hệ thống cung cấp các chức năng quản lý nhóm, ghi nhận chi phí, tính toán công nợ, theo dõi thanh toán và lưu trữ hóa đơn trên một nền tảng tập trung, đồng thời tận dụng các dịch vụ AWS để đảm bảo khả năng triển khai, lưu trữ và giám sát hệ thống hiệu quả. 
 
 *Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+
+Việc triển khai Splitly mang lại nhiều lợi ích, bao gồm:
+- Giảm thời gian tính toán và đối chiếu công nợ giữa các thành viên.
+- Hạn chế sai sót trong quá trình chia chi phí và thanh toán.
+- Tăng tính minh bạch nhờ lịch sử giao dịch và trạng thái thanh toán được lưu trữ tập trung.
+- Hỗ trợ lưu trữ hóa đơn điện tử, giúp dễ dàng tra cứu và kiểm chứng khi cần.
+- Giám sát hoạt động của hệ thống thông qua Amazon CloudWatch, góp phần nâng cao khả năng vận hành và xử lý sự cố.
 
 ### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+Dự án sử dụng kiến trúc nguyên khối (Monolithic) cho phần ứng dụng, được triển khai tập trung trên hạ tầng đám mây AWS với 3 tầng chính:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+### Presentation Layer – Frontend
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+* Frontend React/Vite được build thành các file tĩnh (HTML, CSS và JavaScript).
+* Các file tĩnh này được lưu trữ trực tiếp trên máy chủ EC2 và được phục vụ bởi Web Server Nginx.
+* Khi người dùng truy cập website thông qua Elastic IP (cổng 80), Nginx sẽ tải và trả về giao diện cho trình duyệt.
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+### Application Layer – Backend
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+* Cả Backend (Node.js) và Web Server Nginx (phục vụ Frontend) đều được triển khai chung trên một máy chủ Amazon EC2 instance.
+* EC2 nằm trong Public Subnet thuộc VPC tại Region ap-southeast-1.
+* Web Security Group kiểm soát các cổng được phép truy cập vào EC2 (mở cổng 80 cho web traffic và 22 cho quản trị SSH).
+* Internet Gateway tạo đường kết nối 2 chiều giữa EC2 và Internet.
+* Nginx cũng đóng vai trò là một Reverse Proxy để định tuyến các request gọi REST API (từ đường dẫn `/api`) vào Backend đang chạy trên cổng 5000 (quản lý bởi PM2).
+* Tầng ứng dụng này cũng tích hợp trực tiếp với các dịch vụ bên thứ 3 qua Internet như cổng thanh toán VNPay và Gmail SMTP.
+
+### Data Layer
+
+* Dữ liệu nghiệp vụ như thông tin người dùng, nhóm, chi phí, giao dịch thanh toán, khiếu nại và thông báo được lưu trữ an toàn trên hệ quản trị cơ sở dữ liệu bên ngoài là MongoDB Atlas.
+* Ảnh hoặc file biên lai thanh toán được tải lên và lưu trữ riêng trong Amazon S3 Receipts Bucket.
+* MongoDB chỉ lưu trữ các metadata (như tên file, object key, URL hoặc trạng thái xử lý), thay vì lưu trực tiếp file vật lý nhằm tối ưu chi phí và hiệu suất.
+
+### Security, Monitoring and Cost Management
+
+* **IAM Role:** EC2 được gắn IAM Role để cấp quyền đẩy file lên S3 Receipts Bucket và gửi dữ liệu cho CloudWatch, đảm bảo an toàn tuyệt đối do không cần phải lưu trữ Access Key/Secret Key cứng trên máy chủ.
+* **Quản lý cấu hình:** Các thông tin nhạy cảm (như MongoDB URI, JWT secret, cấu hình GMAIL, khóa VNPay) được thiết lập thông qua các biến môi trường (file `.env`) lưu trữ bảo mật ngay trên máy chủ EC2.
+* **Giám sát (Monitoring):** Amazon CloudWatch được sử dụng để thu thập các metric cơ bản và log hệ thống, theo dõi trạng thái hoạt động của EC2 và ứng dụng. Khi có sự cố lỗi hoặc thông số vượt ngưỡng, CloudWatch sẽ kích hoạt cảnh báo qua Amazon SNS.
+* **Quản lý chi phí:** AWS Budgets liên tục theo dõi chi phí tài nguyên và sẽ tự động gửi cảnh báo (qua email hoặc SNS) nếu chi tiêu vượt mức ngân sách dự kiến của dự án.
+
+### 3.1 Kiến trúc hiện tại
+![Architecture](/images/2-Proposal/Architecture_Final.png)
+
+### Dịch vụ AWS sử dụng
+
+* **Amazon S3:** Lưu trữ các file biên lai do người dùng tải lên.
+* **Amazon EC2:** Chạy backend API và xử lý nghiệp vụ của hệ thống.
+* **AWS IAM:** Cấp quyền cho EC2 truy cập các tài nguyên AWS cần thiết.
+* **Amazon CloudWatch:** Thu thập log, theo dõi EC2 và phát hiện sự cố.
+* **Amazon SNS:** Gửi email hoặc thông báo cảnh báo từ CloudWatch và AWS Budgets.
+* **AWS Budgets:** Theo dõi chi phí và cảnh báo khi vượt ngân sách.
+
+### Thiết kế thành phần
+
+* **Giao diện web & Proxy:** Ứng dụng Frontend (React/Vite) được build thành các file tĩnh và được lưu trữ, phục vụ trực tiếp bởi máy chủ Nginx chạy trên Amazon EC2. Nginx đồng thời làm nhiệm vụ Reverse Proxy để định tuyến các luồng request API từ người dùng vào Backend.
+
+* **Xử lý nghiệp vụ (Backend):** Amazon EC2 (cùng máy chủ với giao diện web) chạy backend API (qua Node.js/PM2), đảm nhiệm xử lý xác thực, quản lý nhóm, chi phí, thanh toán, biên lai, khiếu nại và thông báo.
+
+* **Lưu trữ dữ liệu:** MongoDB Atlas lưu dữ liệu cốt lõi bao gồm thông tin người dùng, nhóm, chi phí, settlement, dispute và notification.
+
+* **Lưu trữ biên lai:** Amazon S3 (Receipts Bucket) lưu giữ hình ảnh và file biên lai do người dùng tải lên, giúp giảm tải dung lượng lưu trữ cục bộ cho EC2.
+
+* **Kết nối mạng:** Amazon VPC, Public Subnet, Internet Gateway và Elastic IP tạo hạ tầng mạng cơ sở, hỗ trợ EC2 kết nối với người dùng, đẩy file lên S3, kết nối với MongoDB Atlas và gọi các dịch vụ bên ngoài (như cổng thanh toán VNPay, Gmail SMTP).
+
+* **Bảo vệ hệ thống:** Web Security Group đóng vai trò tường lửa, giới hạn các cổng và nguồn mạng được phép truy cập vào EC2 (ví dụ: chỉ cho phép cổng 80 cho web traffic và 22 cho quản trị SSH).
+
+* **Quản lý cấu hình & Secret:** Các thông tin nhạy cảm của hệ thống (MongoDB URI, JWT Secret, thông tin Gmail, khóa VNPay) được lưu trữ qua các biến môi trường (tệp `.env`) trực tiếp trên máy chủ EC2.
+
+* **Quản lý quyền truy cập:** AWS IAM Role cấp quyền (theo nguyên tắc đặc quyền tối thiểu) cho máy chủ EC2 để truy cập vào S3 Receipts Bucket và CloudWatch một cách an toàn mà không cần lưu trữ Access Key trên máy chủ.
+
+* **Giám sát hệ thống:** Amazon CloudWatch hoạt động ngầm để thu thập log ứng dụng, theo dõi trạng thái tài nguyên (CPU, RAM, Disk) của EC2 và tạo cảnh báo khi phát hiện sự cố.
+
+* **Gửi cảnh báo:** Amazon SNS làm nhiệm vụ trung chuyển, gửi email hoặc tin nhắn thông báo từ CloudWatch và AWS Budgets đến quản trị viên.
+
+* **Quản lý chi phí:** AWS Budgets liên tục theo dõi chi phí sử dụng hạ tầng AWS và kích hoạt cảnh báo khi mức tiêu dùng đạt hoặc vượt ngưỡng ngân sách dự kiến.
+
+### 3.2 Kiến trúc đề xuất trong tương lai
+
+Hình dưới đây mô tả kiến trúc nâng cấp được đề xuất cho hệ thống Splitly trong tương lai. Kiến trúc này chưa nằm trong phạm vi triển khai hiện tại nhưng được định hướng là giai đoạn phát triển tiếp theo của hệ thống.
+
+![Architecture_Update](/images/2-Proposal/Architecture_Update.png)
+
+Trong kiến trúc đề xuất, ứng dụng frontend sẽ được tách khỏi máy chủ backend. Frontend React/Vite được build thành các file tĩnh và lưu trữ trong Amazon S3 Frontend Bucket. Amazon CloudFront được sử dụng để phân phối nội dung frontend đến người dùng, giúp giảm độ trễ và cải thiện tốc độ tải trang.
+
+Amazon Route 53 được sử dụng để quản lý tên miền và định tuyến người dùng đến hệ thống. AWS WAF được đặt trước CloudFront nhằm hỗ trợ bảo vệ ứng dụng khỏi một số hình thức tấn công web phổ biến. AWS Certificate Manager được sử dụng để quản lý chứng chỉ SSL/TLS, cho phép hệ thống cung cấp kết nối HTTPS an toàn.
+
+Ứng dụng backend tiếp tục được triển khai trên một Amazon EC2 instance nằm trong Public Subnet thuộc Amazon VPC. Backend chịu trách nhiệm xử lý nghiệp vụ, cung cấp REST API, kết nối với MongoDB Atlas và tải các file biên lai lên Amazon S3 Receipts Bucket.
+
+Amazon S3 Receipts Bucket được sử dụng riêng để lưu trữ hình ảnh và file biên lai do người dùng tải lên. Việc tách riêng Frontend Bucket và Receipts Bucket giúp hệ thống quản lý dữ liệu rõ ràng hơn và áp dụng các chính sách truy cập phù hợp cho từng loại tài nguyên.
+
+Amazon CloudWatch được sử dụng để thu thập metric hạ tầng và log ứng dụng. Amazon SNS chịu trách nhiệm gửi cảnh báo vận hành đến quản trị viên, trong khi AWS Budgets theo dõi chi phí sử dụng tài nguyên và gửi thông báo khi mức chi tiêu tiệm cận hoặc vượt ngưỡng ngân sách đã thiết lập.
+
+AWS IAM được sử dụng để quản lý quyền truy cập giữa EC2 và các dịch vụ AWS. EC2 được gắn IAM Role nhằm cho phép backend truy cập S3 và CloudWatch mà không cần lưu trữ Access Key và Secret Access Key trực tiếp trên máy chủ.
+
+### 3.3 Những cải tiến dự kiến
+
+So với kiến trúc hiện tại, kiến trúc đề xuất trong tương lai mang lại các cải tiến sau:
+
++ **Tách biệt frontend và backend:** Các file frontend tĩnh được chuyển từ EC2 sang Amazon S3, giúp EC2 tập trung xử lý API và nghiệp vụ backend.
+
++ **Cải thiện hiệu suất:** Amazon CloudFront lưu vào bộ nhớ đệm và phân phối nội dung frontend thông qua hệ thống edge location, giúp giảm thời gian tải trang cho người dùng.
+
++ **Hỗ trợ tên miền riêng:** Amazon Route 53 cho phép người dùng truy cập Splitly thông qua tên miền thay vì sử dụng trực tiếp địa chỉ Elastic IP.
+
++ **Hỗ trợ HTTPS:** AWS Certificate Manager quản lý chứng chỉ SSL/TLS, giúp mã hóa dữ liệu truyền giữa người dùng và hệ thống.
+
++ **Tăng cường bảo mật ứng dụng web:** AWS WAF hỗ trợ lọc và kiểm soát các request trước khi chúng được chuyển đến CloudFront và các thành phần phía sau.
+
++ **Giảm tải cho EC2:** Việc phục vụ frontend thông qua Amazon S3 và CloudFront giúp giảm lượng request và lưu lượng mà máy chủ EC2 phải xử lý.
+
++ **Quản lý lưu trữ rõ ràng hơn:** Frontend Bucket được sử dụng cho các file giao diện tĩnh, trong khi Receipts Bucket được sử dụng riêng cho các file do người dùng tải lên.
+
++ **Cải thiện khả năng mở rộng:** Frontend và backend có thể được nâng cấp hoặc mở rộng độc lập theo nhu cầu sử dụng của hệ thống.
+
++ **Cải thiện khả năng giám sát:** Amazon CloudWatch, Amazon SNS và AWS Budgets giúp nhóm theo dõi trạng thái hoạt động, nhận cảnh báo sự cố và kiểm soát chi phí tốt hơn.
+
+Kiến trúc này tạo nền tảng cho các giai đoạn mở rộng tiếp theo của Splitly, chẳng hạn như bổ sung Application Load Balancer, Auto Scaling, Amazon Cognito, AWS Lambda hoặc quy trình triển khai tự động CI/CD.
+
 
 ### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+Clone mã nguồn từ GitHub xuống máy chủ EC2; cấu hình các biến môi trường nhạy cảm qua tệp `.env`. Cài đặt và build frontend (React/Vite), đồng thời cấu hình Nginx để phục vụ các file tĩnh và làm reverse proxy. Build backend (Node.js/Express) và duy trì tiến trình bằng PM2; kết nối thành công backend với MongoDB, S3 Receipts Bucket và các dịch vụ bên thứ 3 (VNPay, Gmail). Cuối cùng là kiểm thử API, chức năng upload biên lai, giám sát log và đưa hệ thống vào vận hành.
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+### Yêu cầu kỹ thuật (Bản cập nhật)
+
+#### Kiến trúc và Hạ tầng
+
+Hệ thống được triển khai tại AWS Region Singapore (ap-southeast-1). Toàn bộ ứng dụng (frontend và backend) được lưu trữ và vận hành tập trung trên một máy chủ Amazon EC2 duy nhất, đặt trong Public Subnet của một VPC.
+
+#### Công nghệ
+
+* **Frontend:** Sử dụng React, TypeScript và Vite.
+* **Backend:** Sử dụng Node.js, Express và TypeScript, cung cấp REST API.
+* **Web Server & Process Manager:** Cài đặt Nginx làm Web Server và Reverse Proxy; sử dụng PM2 để quản lý và tự động khởi động lại tiến trình backend.
+
+#### Quản lý Mã nguồn và Triển khai
+
+Mã nguồn được quản lý trên GitHub. Quá trình triển khai (cài đặt dependencies, build code) được thực hiện trực tiếp trên môi trường EC2 thông qua command line.
+
+#### Dữ liệu và Lưu trữ
+
+Dữ liệu nghiệp vụ cốt lõi được lưu trữ an toàn trên dịch vụ MongoDB Atlas. Các file tĩnh (hình ảnh, biên lai) do người dùng tải lên được đẩy sang Amazon S3 Receipts Bucket để tối ưu lưu trữ.
+
+#### Mạng và Kết nối
+
+Máy chủ EC2 giao tiếp với Internet thông qua Internet Gateway và Elastic IP. Security Group được thiết lập để mở cổng 80 (HTTP) phục vụ người dùng web và cổng 22 (SSH) cho quản trị viên. Nginx chịu trách nhiệm định tuyến traffic: trả về file frontend tĩnh hoặc proxy luồng API sang cổng 5000 của backend nội bộ.
+
+#### Bảo mật và Phân quyền
+
+Các thông tin nhạy cảm (Database URI, JWT Secret, Key tích hợp) được bảo vệ nội bộ thông qua file biến môi trường (`.env`). Máy chủ EC2 được gắn IAM Role để cấp quyền truy cập vào S3 Receipts Bucket và hệ thống CloudWatch tuân thủ chặt chẽ nguyên tắc đặc quyền tối thiểu (Least Privilege).
+
+#### Giám sát và Cảnh báo
+
+Amazon CloudWatch được cấu hình để thu thập metric máy chủ và log ứng dụng. Amazon SNS đóng vai trò làm kênh truyền tải, gửi cảnh báo đến email của quản trị viên khi hệ thống gặp sự cố hoặc tài nguyên bị tắc nghẽn.
+
+#### Quản lý Chi phí
+
+Dịch vụ AWS Budgets liên tục theo dõi chi phí sử dụng hệ sinh thái AWS và tự động gửi cảnh báo khi mức chi tiêu thực tế hoặc dự báo tiệm cận với giới hạn ngân sách đã thiết lập.
+
+#### Yêu cầu Phi chức năng
+
+Hệ thống được đặt tại khu vực Singapore nhằm tối ưu hóa, giảm thiểu độ trễ mạng khi truy cập từ Việt Nam. Kiến trúc trên EC2 hoàn toàn phù hợp với ngân sách dự án sinh viên và có khả năng mở rộng dọc (Scale-up) cấu hình RAM/CPU nếu lượng truy cập gia tăng.
 
 ### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+Dự án được triển khai theo 4 giai đoạn chính trong khoảng 3 tháng nhằm đảm bảo quá trình phát triển, kiểm thử và triển khai được thực hiện có hệ thống.
+
+#### Giai đoạn 1 – Phân tích yêu cầu và thiết kế hệ thống (Tuần 5 - Tuần 6)
+
+* Phân tích yêu cầu nghiệp vụ của hệ thống quản lý chi tiêu nhóm.
+* Thiết kế kiến trúc tổng thể trên AWS.
+* Thiết kế cơ sở dữ liệu MongoDB Atlas.
+* Xây dựng giao diện và kiến trúc Backend.
+
+#### Giai đoạn 2 – Phát triển chức năng (Tuần 7 – Tuần 8)
+
+* Phát triển Frontend bằng React + Vite.
+* Phát triển API bằng Node.js và Express.
+* Tích hợp MongoDB Atlas.
+* Xây dựng chức năng:
+
+  * Authentication
+  * Group Management
+  * Expense Management
+  * Settlement
+  * Receipt Upload
+
+#### Giai đoạn 3 – Triển khai AWS (Tuần 9 – Tuần 10)
+
+* Khởi tạo Amazon EC2.
+* Cấu hình VPC, Security Group và Elastic IP.
+* Triển khai Backend và Frontend lên EC2.
+* Tạo Amazon S3 Bucket lưu trữ Receipt.
+* Cấu hình IAM Role.
+* Thiết lập CloudWatch Monitoring.
+
+#### Giai đoạn 4 – Kiểm thử và hoàn thiện (Tuần 11 – Tuần 12)
+
+* Kiểm thử chức năng.
+* Kiểm thử API.
+* Kiểm thử khả năng upload Receipt.
+* Kiểm tra Logging và Monitoring.
+* Tối ưu chi phí AWS.
+* Hoàn thiện tài liệu và báo cáo.
+    
 
 ### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+Hệ thống được thiết kế hướng đến quy mô nhỏ phục vụ mục đích học tập và thử nghiệm, do đó ưu tiên sử dụng tối đa các dịch vụ thuộc AWS Free Tier và các dịch vụ có chi phí thấp nhất có thể.
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+### Chi phí hạ tầng dự kiến
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+* **Amazon EC2:** 0,00 USD/tháng (Sử dụng Instance t3.micro, nằm trong AWS Free Tier, 750 giờ/tháng. Đảm nhiệm chạy cả Web Server Nginx và Backend Node.js).
+
+* **Amazon S3 Standard:** 0,10 USD/tháng (Dự kiến 5 GB lưu trữ cho Receipts Bucket, với khoảng 2.000 requests PUT/GET).
+
+* **Amazon CloudWatch:** 0,03 USD/tháng (Đẩy metric giám sát EC2 cơ bản và lưu trữ log của ứng dụng).
+
+* **Amazon SNS:** 0,00 USD/tháng (Dự kiến 100 email cảnh báo mỗi tháng, hoàn toàn nằm trong Free Tier).
+
+* **Amazon VPC:** 0,00 USD/tháng (Bao gồm 1 VPC, Public Subnet, Internet Gateway, Route Table và Security Group).
+
+* **Elastic IP:** 3,65 USD/tháng (AWS tính phí 0.005 USD/giờ cho tất cả địa chỉ Public IPv4, bao gồm cả Elastic IP đã gắn vào EC2).
+
+* **AWS IAM:** 0,00 USD/tháng (Quản lý IAM Role và quyền truy cập cho hệ thống).
+
+**Tổng chi phí ước tính:** Khoảng 3,78 USD/tháng, tương đương 45,36 USD/12 tháng.
+
+Trong giai đoạn phát triển, nhóm dự kiến tận dụng tối đa gói AWS Free Tier, kết hợp với việc lưu trữ cấu hình bảo mật trực tiếp trên máy chủ (thông qua tệp `.env`) nhằm tối ưu hóa chi phí vận hành xuống mức thấp nhất. Sau khi hệ thống được đưa vào vận hành ổn định, chi phí thực tế sẽ được theo dõi liên tục qua AWS Budgets và có thể tính toán lại bằng AWS Pricing Calculator nếu lưu lượng người dùng thực tế vượt mức dự kiến ban đầu.
 
 ### 7. Đánh giá rủi ro  
 *Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+- **EC2 gặp sự cố:** Ảnh hưởng cao, xác suất thấp.
+- **MongoDB Atlas mất kết nối:** Ảnh hưởng cao, xác suất thấp.
+- **Upload Receipt thất bại:** Ảnh hưởng trung bình, xác suất thấp.
+- **Lộ thông tin Secret:** Ảnh hưởng cao, xác suất trung bình.
+- **Cấu hình Security Group sai:** Ảnh hưởng cao, xác suất thấp.
+- **Vượt ngân sách AWS Free Tier:** Ảnh hưởng trung bình, xác suất trung bình.
 
 *Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+-  Thiết lập CloudWatch và SNS để theo dõi tình trạng EC2.
+- Thiết lập AWS Budget nhằm cảnh báo khi chi phí vượt ngưỡng.
+- Sử dụng IAM Role thay cho Access Key khi truy cập dịch vụ AWS.
+- Thiết lập Security Group theo nguyên tắc chỉ mở các cổng cần thiết.
+- Kiểm tra định kỳ kết nối giữa EC2 và MongoDB Atlas.  
 
 *Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+- Khởi động lại hoặc triển khai lại EC2 từ source code khi xảy ra sự cố.
+- Khôi phục dữ liệu Receipt từ Amazon S3.
+- Khôi phục cấu hình từ GitHub Repository.
+- Chuyển sang MongoDB Atlas Backup nếu cơ sở dữ liệu gặp lỗi.
+- Điều chỉnh cấu hình dịch vụ hoặc giới hạn tài nguyên khi chi phí vượt ngân sách. 
 
 ### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+*Kết quả kỹ thuật*
+
+- Xây dựng thành công hệ thống Splitly hoạt động ổn định trên nền tảng AWS, đáp ứng các chức năng quản lý nhóm, quản lý chi phí, quyết toán và lưu trữ biên lai.
+- Triển khai ứng dụng trên Amazon EC2, lưu trữ biên lai bằng Amazon S3 và kết nối với MongoDB Atlas để quản lý dữ liệu.
+- Thiết lập Amazon CloudWatch, Amazon SNS và AWS Budgets nhằm giám sát hệ thống, gửi cảnh báo và kiểm soát chi phí vận hành.
+- Áp dụng IAM Role và Security Group để tăng cường bảo mật, đồng thời đảm bảo hệ thống có khả năng mở rộng trong tương lai.
+
+*Giá trị mang lại*
+
+- Giúp người dùng quản lý các khoản chi tiêu nhóm minh bạch, giảm sai sót trong quá trình tính toán và quyết toán.
+- Hỗ trợ lưu trữ hóa đơn tập trung, giúp dễ dàng tra cứu và đối chiếu khi cần.
+- Cung cấp nền tảng có thể tiếp tục mở rộng với các dịch vụ AWS như CloudFront, Route 53, AWS WAF, Auto Scaling hoặc CI/CD trong các giai đoạn phát triển tiếp theo.
+- Là sản phẩm thực tế phục vụ mục đích học tập, nghiên cứu và có thể làm nền tảng cho các dự án quản lý tài chính nhóm trong tương lai.
